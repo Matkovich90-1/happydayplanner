@@ -17,10 +17,15 @@ jobs:
           pip install pyinstaller tkcalendar
 
       - name: Build EXE
-        run: pyinstaller --noconsole --onefile --hidden-import babel.numbers --name "HappyDayPlanner" main.py
+        run: pyinstaller --noconsole --onefile --hidden-import babel.numbers --name "HappyDayPlanner" happydayplanner.py
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Windows-EXE
           path: dist/HappyDayPlanner.exe
+
+
+
+
+
